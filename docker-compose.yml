@@ -23,6 +23,7 @@ x-n8n: &service-n8n
     - N8N_HOST
     - N8N_PROTOCOL
     - N8N_PORT
+    - N8N_SECURE_COOKIE
 
 x-ollama: &service-ollama
   image: ollama/ollama:latest
