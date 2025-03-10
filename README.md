@@ -113,6 +113,43 @@ cd self-hosted-ai-starter-kit
 docker compose --profile cpu up
 ```
 
+### Enable Swap Memory (Linux/macOS)
+
+If your RAM is limited, create or increase swap space:
+
+```
+sudo fallocate -l 4G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+```
+
+## Install docker compose (v2) for linux 
+1. Ensure Docker is Installed
+   
+   If you haven't installed Docker yet, install it first:
+
+   ```
+   sudo apt update
+   sudo apt install docker.io -y
+   sudo systemctl enable --now docker
+   ```
+1. Download Docker Compose V2
+Run the following command to download the latest version:
+
+   ```
+   sudo mkdir -p /usr/local/lib/docker/cli-plugins
+   sudo curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+   ```
+3. Set Executable Permission
+   ```
+   sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+   ```
+4. Verify Installation
+   ```
+   docker compose version
+   ```
+
 ## ⚡️ Quick start and usage
 
 The core of the Self-hosted AI Starter Kit is a Docker Compose file, pre-configured with network and storage settings, minimizing the need for additional installations.
@@ -236,3 +273,4 @@ can:
   pro, the community and our team are ready to support with any challenges.
 - **Propose Ideas**: Have an idea for a feature or improvement? Let us know!
   We’re always eager to hear what you’d like to see next.
+
