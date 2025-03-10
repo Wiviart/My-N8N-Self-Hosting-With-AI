@@ -21,11 +21,11 @@ x-n8n: &service-n8n
     - N8N_ENCRYPTION_KEY
     - N8N_USER_MANAGEMENT_JWT_SECRET
     - OLLAMA_HOST=ollama:11434
-    - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
+    # - WEBHOOK_URL=https://${SUBDOMAIN}${DOMAIN_NAME}/
+    # - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
     - N8N_PORT=5678
-    - N8N_PROTOCOL=https
+    - N8N_PROTOCOL=http
     - NODE_ENV=production
-    - WEBHOOK_URL=https://${SUBDOMAIN}${DOMAIN_NAME}/
     - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
 
 x-ollama: &service-ollama
