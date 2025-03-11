@@ -2,7 +2,7 @@
 
 **Self-hosted AI Starter Kit** is an open-source Docker Compose template designed to swiftly initialize a comprehensive local AI and low-code development environment.
 
-![n8n.io - Screenshot](https://raw.githubusercontent.com/n8n-io/self-hosted-ai-starter-kit/main/assets/n8n-demo.gif)
+![n8n.io - Screenshot](https://raw.githubusercontent.com/n8n-io/My-N8N-Self-Hosting-With-AI/main/assets/n8n-demo.gif)
 
 Curated by <https://github.com/n8n-io>, it combines the self-hosted n8n
 platform with a curated list of compatible AI products and components to
@@ -40,8 +40,8 @@ Engineering world, handles large amounts of data safely.
 ### Cloning the Repository
 
 ```bash
-git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/Wiviart/My-N8N-Self-Hosting-With-AI.git
+cd My-N8N-Self-Hosting-With-AI
 ```
 
 ### Running n8n using Docker Compose
@@ -49,8 +49,8 @@ cd self-hosted-ai-starter-kit
 #### For Nvidia GPU users
 
 ```
-git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/Wiviart/My-N8N-Self-Hosting-With-AI.git
+cd My-N8N-Self-Hosting-With-AI
 docker compose --profile gpu-nvidia up
 ```
 
@@ -61,8 +61,8 @@ docker compose --profile gpu-nvidia up
 ### For AMD GPU users on Linux
 
 ```
-git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/Wiviart/My-N8N-Self-Hosting-With-AI.git
+cd My-N8N-Self-Hosting-With-AI
 docker compose --profile gpu-amd up
 ```
 
@@ -81,8 +81,8 @@ If you want to run Ollama on your mac, check the
 for installation instructions, and run the starter kit as follows:
 
 ```
-git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/Wiviart/My-N8N-Self-Hosting-With-AI.git
+cd My-N8N-Self-Hosting-With-AI
 docker compose up
 ```
 
@@ -108,8 +108,8 @@ Additionally, after you see "Editor is now accessible via: <http://localhost:567
 #### For everyone else
 
 ```
-git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git
-cd self-hosted-ai-starter-kit
+git clone https://github.com/Wiviart/My-N8N-Self-Hosting-With-AI.git
+cd My-N8N-Self-Hosting-With-AI
 docker compose --profile cpu up
 ```
 
