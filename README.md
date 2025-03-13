@@ -150,6 +150,12 @@ Run the following command to download the latest version:
    docker compose version
    ```
 
+## Update Ollama:latest
+```
+docker exec -ti ollama/ollama /bin/bash
+ollama pull llama3.2
+```
+
 ## ⚡️ Quick start and usage
 
 The core of the Self-hosted AI Starter Kit is a Docker Compose file, pre-configured with network and storage settings, minimizing the need for additional installations.

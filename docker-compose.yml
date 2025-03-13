@@ -10,6 +10,7 @@ networks:
 x-n8n: &service-n8n
   image: n8nio/n8n:latest
   networks: ['demo']
+  user: root
   environment:
     - DB_TYPE=postgresdb
     - DB_POSTGRESDB_HOST=postgres
@@ -21,6 +22,7 @@ x-n8n: &service-n8n
     - N8N_USER_MANAGEMENT_JWT_SECRET
     - OLLAMA_HOST=ollama:11434
     - N8N_HOST=${SUBDOMAIN}${DOMAIN_NAME}
+    - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
 
 x-ollama: &service-ollama
   image: ollama/ollama:latest
@@ -68,9 +70,13 @@ services:
     hostname: n8n-import
     container_name: n8n-import
     entrypoint: /bin/sh
+    user: root
     command:
       - "-c"
       - "n8n import:credentials --separate --input=/backup/credentials && n8n import:workflow --separate --input=/backup/workflows"
+      - "apk add --update python3 py3-pip gcc python3-dev musl-dev curl ffmpeg && node /usr/local/bin/n8n"
+      - "apk add --update yt-dlp"
+
     volumes:
       - ./n8n/backup:/backup
     depends_on:
@@ -81,6 +87,7 @@ services:
     <<: *service-n8n
     hostname: n8n
     container_name: n8n
+    user: root
     restart: unless-stopped
     ports:
       - 5678:5678
