@@ -156,6 +156,12 @@ docker exec -ti ollama/ollama /bin/bash
 ollama pull llama3.2
 ```
 
+## Install other packages
+```
+docker exec -ti --user root n8n /bin/sh
+apk add --update python3 py3-pip gcc python3-dev musl-dev curl ffmpeg yt-dlp && node /usr/local/bin/n8n
+```
+
 ## ⚡️ Quick start and usage
 
 The core of the Self-hosted AI Starter Kit is a Docker Compose file, pre-configured with network and storage settings, minimizing the need for additional installations.
@@ -207,6 +213,13 @@ docker compose create && docker compose up
 ```bash
 docker compose --profile cpu pull
 docker compose create && docker compose --profile cpu up
+```
+
+## Update images
+```
+docker compose down
+# Delete ollama or any container that not be deleted
+docker compose up --profile <profile> -d
 ```
 
 ## 👓 Recommended reading

@@ -74,9 +74,6 @@ services:
     command:
       - "-c"
       - "n8n import:credentials --separate --input=/backup/credentials && n8n import:workflow --separate --input=/backup/workflows"
-      - "apk add --update python3 py3-pip gcc python3-dev musl-dev curl ffmpeg && node /usr/local/bin/n8n"
-      - "apk add --update yt-dlp"
-
     volumes:
       - ./n8n/backup:/backup
     depends_on:
