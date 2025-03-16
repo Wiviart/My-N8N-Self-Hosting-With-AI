@@ -222,6 +222,11 @@ docker compose down
 docker compose up --profile <profile> -d
 ```
 
+## Add WebUI for Ollama
+```
+docker run -d --network=self-hosted-ai-starter-kit_demo -p 8080:8080  -v open-webui:/app/backend/data  -e OLLAMA_BASE_URL=http://ollama:11434  --name open-webui --restart always  ghcr.io/open-webui/open-webui:main
+```
+
 ## 👓 Recommended reading
 
 n8n is full of useful content for getting started quickly with its AI concepts
