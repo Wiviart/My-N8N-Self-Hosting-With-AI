@@ -162,6 +162,12 @@ docker exec -ti --user root n8n /bin/sh
 apk add --update python3 py3-pip gcc python3-dev musl-dev curl ffmpeg yt-dlp && node /usr/local/bin/n8n
 ```
 
+## Import backed up credentials and workflows
+```
+docker exec -it n8n n8n import:workflow --input=/<path>/exported_workflows.json
+docker exec -it n8n n8n import:credentials --input=/<path>/exported_credentials.json
+```
+
 ## ⚡️ Quick start and usage
 
 The core of the Self-hosted AI Starter Kit is a Docker Compose file, pre-configured with network and storage settings, minimizing the need for additional installations.
